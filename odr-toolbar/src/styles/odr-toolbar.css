@@ -12,3 +12,19 @@
   composes: baseStyle;
   font-size: 18px;
 }
+
+.toolbarMenuIcon {
+	color : #fff!important;
+}
+
+.toolbarTitleText {
+	color : #fff!important;
+}
+
+.toolbarMoreVert {
+	color : #fff!important;
+}
+
+.toolbar {
+	background-color: #007bc4 !important;
+}

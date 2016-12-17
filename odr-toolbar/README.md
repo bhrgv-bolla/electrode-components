@@ -1,7 +1,10 @@
 # odr-toolbar
 
-__COMPONENT DESCRIPTION GOES HERE__
-
+Contains:
+	a title
+	a side-nav
+	a more options icon
+	logout buttons and login indicator. 
 
 ## Demo & Examples
 

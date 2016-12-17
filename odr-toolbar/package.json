@@ -15,7 +15,10 @@
     "url": "https://github.com/walmart-grs/odr-toolbar/issues"
   },
   "homepage": "https://github.com/walmart-grs/odr-toolbar",
-  "dependencies": {},
+  "dependencies": {
+    "material-ui": "^0.16.5",
+    "react-tap-event-plugin": "^2.0.1"
+  },
   "devDependencies": {
     "electrode-archetype-react-component": "^1.0.0",
     "electrode-archetype-react-component-dev": "^1.0.0",

@@ -3,8 +3,8 @@
 import React from "react";
 import { addLocaleData, IntlProvider } from "react-intl";
 import Demo from "electrode-demo-index";
-
 import * as libraryScope from "../src/index";
+
 
 const locale = "en";
 const messages = require(`../src/lang/${locale}.json`);
@@ -28,7 +28,7 @@ const components = [
 ];
 
 const demo = () => (
-  <Demo scope={localScope} libraryScope={libraryScope} components={components} />
+  	<Demo scope={localScope} libraryScope={libraryScope} components={components} />
 );
 
 export default demo;
