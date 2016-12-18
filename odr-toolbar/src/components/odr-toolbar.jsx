@@ -14,6 +14,7 @@ import IconMenu from 'material-ui/IconMenu';
 import IconButton from 'material-ui/IconButton';
 import MenuItem from 'material-ui/MenuItem';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Divider from 'material-ui/Divider';
 
 export default class OdrToolbar extends React.Component {
 
@@ -22,24 +23,25 @@ export default class OdrToolbar extends React.Component {
 		<MuiThemeProvider>
 			<Toolbar className={styles.toolbar}>
 				<ToolbarGroup firstChild={true}>
-					<IconButton tooltip="Open Menu" touch={true} tooltipPosition="bottom-center">
+					<IconButton tooltip="Open Menu" touch={true} tooltipPosition="bottom-right" onClick={this.props.openMenu}>
 		 				<NavigationMenu className={styles.toolbarMenuIcon}/>
 	 				</IconButton>
 				</ToolbarGroup>
 				<ToolbarGroup>
-					<ToolbarTitle text={this.props.titleText!=null? this.props.titleText : "On Demand Replenishment"} className={styles.toolbarTitleText}/>
+					<ToolbarTitle text={this.props.titleText} className={styles.toolbarTitleText}/>
 				</ToolbarGroup>
 				<ToolbarGroup lastChild={true}>
-					<IconMenu
-            iconButtonElement={
-              <IconButton touch={true}>
-                <NavigationMoreVert className={styles.toolbarMoreVert}/>
-              </IconButton>
-            }
-          >
-            <MenuItem primaryText="Settings" />
-            <MenuItem primaryText="Logout" />
-          </IconMenu>
+						<IconMenu
+	            iconButtonElement={
+	              <IconButton touch={true}>
+	                <NavigationMoreVert className={styles.toolbarMoreVert}/>
+	              </IconButton>
+	            }
+	          >
+	            <MenuItem primaryText="Preferences" />
+							<Divider/>
+	            <MenuItem primaryText="Logout" />
+						</IconMenu>
 				</ToolbarGroup>
 			</Toolbar>
 		</MuiThemeProvider>
@@ -49,9 +51,14 @@ export default class OdrToolbar extends React.Component {
 
 OdrToolbar.displayName = "OdrToolbar";
 
-OdrToolbar.propTypes = {};
+OdrToolbar.propTypes = {
+	openMenu : React.PropTypes.func,
+	titleText : React.PropTypes.string
+};
 
-OdrToolbar.defaultProps = {};
+OdrToolbar.defaultProps = {
+	titleText : 'On Demand Replenishment'
+};
 
 
 /*

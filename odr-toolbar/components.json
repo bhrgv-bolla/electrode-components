@@ -1,5 +1,29 @@
 {
   "library": "odr-toolbar",
   "description": "odr-toolbar",
-  "components": []
+  "components": [
+    {
+      "description": "",
+      "displayName": "OdrToolbar",
+      "methods": [],
+      "props": {
+        "openMenu": {
+          "type": {
+            "name": "func"
+          },
+          "required": false,
+          "description": ""
+        },
+        "titleText": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "description": ""
+        }
+      },
+      "fileName": "./src/components/odr-toolbar.jsx",
+      "hasProps": true
+    }
+  ]
 }
